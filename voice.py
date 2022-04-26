@@ -32,20 +32,18 @@ def takeCommand():
         print(f"User said: {query}\n")
 
     except Exception as e:
-        # print(e)
         print("Say that again please...")
         return "None"
+
     return query
 
 
 if __name__ == "__main__":
-    # wishMe()
     speak("I am Vision, how may I help you?")
     print()
 
     flag=True
     while flag:
-        # if 1:
         query = takeCommand().lower()
 
         # Logic for executing tasks based on query
@@ -85,12 +83,10 @@ if __name__ == "__main__":
         elif "who made you" in query or "who created you" in query:
             speak("I have been created by Somil Doshi, Preet Desai, Ronak Dhakad.")
 
-        elif "stop vision" in query:
+        elif "thank you vision" in query:
             flag = False
             speak("Thank you for using me.")
-            speak("This is vision signing off")
+            speak("This is vision signing off.")
 
         else:
             speak('Please repeat the command')
-
-        # flag = False
